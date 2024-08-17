@@ -1,4 +1,4 @@
-<script>
+<script context="module">
     import {get} from "svelte/store";
     import {PlayerName} from "./store.js"
     import {HasVisited} from "./store.js"
@@ -11,7 +11,7 @@
 
     !hasVisited && push("/intro")
 
-    const setPlayerName = (e) => {
+    export const setPlayerName = (e) => {
         console.log(e.target.value)
         PlayerName.set(e.target.value)
     }
